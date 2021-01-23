@@ -6,16 +6,16 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 1 # tells deployment to run 2 pods matching the template
+  replicas: 1 # Update the replicas from 2 to 4
   template:
     metadata:
       labels:
         app: nginx
-  spec:
-    containers:
-    - name: nginx
-      image: csmanyam@static-website:latest
-      ports:
-      - containerPort: 80
-  imagePullSecrets:
-  - name: regcred
+    spec:
+      containers:
+      - name: nginx
+        image: csmanyam/static-website
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: regcred
