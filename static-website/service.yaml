@@ -13,5 +13,3 @@ spec:
     app: nginx
   sessionAffinity: None
   type: NodePort
-status:
-  loadBalancer: {}
